@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false
+  },
+  "include": [
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "**/node_modules/**/*",
+    "typechain-generated/**/*",
+  ]
+}

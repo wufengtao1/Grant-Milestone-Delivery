@@ -1,0 +1,8 @@
+{
+  "projectFiles": [
+    "./contracts/*/Cargo.toml",
+    "./contracts/mock/*/Cargo.toml"
+  ],
+  "artifactsPath": "./artifacts",
+  "typechainGeneratedPath": "./typechain-generated"
+}

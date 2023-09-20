@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["auction_external"],"trait":["Auction"],"type":["AuctionRef"]};

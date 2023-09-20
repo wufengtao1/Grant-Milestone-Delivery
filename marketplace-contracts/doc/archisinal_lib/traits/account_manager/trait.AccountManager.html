@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Account manager trait"><title>AccountManager in archisinal_lib::traits::account_manager - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-f3501f0f5ae15dfb.css" id="mainThemeStyle"><div id="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="archisinal_lib" data-themes="" data-resource-suffix="" data-rustdoc-version="1.71.0 (8ede3aae2 2023-07-12)" data-search-js="search-4926e5fc22a5646a.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-8c76f75bfb6bd192.css" data-theme-light-css="light-0f8c037637f9eb3e.css" data-theme-dark-css="dark-1097f8e92a01e3cf.css" data-theme-ayu-css="ayu-614652228113ac93.css" ></div><script src="../../../static.files/storage-62ce34ea385b278a.js"></script><script defer src="sidebar-items.js"></script><script defer src="../../../static.files/main-f0540c1d82cde29b.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../../../static.files/light-0f8c037637f9eb3e.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../../../static.files/dark-1097f8e92a01e3cf.css"><link rel="stylesheet" href="../../../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc trait"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../../archisinal_lib/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../../../archisinal_lib/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2 class="location"><a href="#">AccountManager</a></h2><div class="sidebar-elems"><section><h3><a href="#required-methods">Required Methods</a></h3><ul class="block"><li><a href="#tymethod.create_account">create_account</a></li><li><a href="#tymethod.create_creator_account">create_creator_account</a></li><li><a href="#tymethod.get_account">get_account</a></li><li><a href="#tymethod.get_creator_account">get_creator_account</a></li><li><a href="#tymethod.get_creator_code_hash">get_creator_code_hash</a></li><li><a href="#tymethod.get_user_code_hash">get_user_code_hash</a></li><li><a href="#tymethod.set_creator_code_hash">set_creator_code_hash</a></li><li><a href="#tymethod.set_user_code_hash">set_user_code_hash</a></li></ul><h3><a href="#implementors">Implementors</a></h3></section><h2><a href="index.html">In archisinal_lib::traits::account_manager</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Trait <a href="../../index.html">archisinal_lib</a>::<wbr><a href="../index.html">traits</a>::<wbr><a href="index.html">account_manager</a>::<wbr><a class="trait" href="#">AccountManager</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../../src/archisinal_lib/traits/account_manager.rs.html#9-131">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><pre class="rust item-decl"><code>pub trait AccountManager {
+    // Required methods
+    fn <a href="#tymethod.create_account" class="fn">create_account</a>(&amp;mut self) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.create_creator_account" class="fn">create_creator_account</a>(&amp;mut self) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_account" class="fn">get_account</a>(&amp;self, account_id: AccountId) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountId&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_creator_account" class="fn">get_creator_account</a>(&amp;self, account_id: AccountId) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountId&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_creator_code_hash" class="fn">get_creator_code_hash</a>(&amp;self) -&gt; Hash;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_user_code_hash" class="fn">get_user_code_hash</a>(&amp;self) -&gt; Hash;
+<span class="item-spacer"></span>    fn <a href="#tymethod.set_creator_code_hash" class="fn">set_creator_code_hash</a>(&amp;mut self, code_hash: Hash) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.set_user_code_hash" class="fn">set_user_code_hash</a>(&amp;mut self, code_hash: Hash) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+}</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Account manager trait</p>
+<p>This trait is used to manage accounts and creators</p>
+</div></details><h2 id="required-methods" class="small-section-header">Required Methods<a href="#required-methods" class="anchor">§</a></h2><div class="methods"><details class="toggle method-toggle" open><summary><section id="tymethod.create_account" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#27">source</a><h4 class="code-header">fn <a href="#tymethod.create_account" class="fn">create_account</a>(&amp;mut self) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Create an account</p>
+<p>This function will deploy an account contract for the caller
+using the user code hash</p>
+<h5 id="errors"><a href="#errors">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::AccountAlreadyExists</code> - If the account already exists</li>
+</ul>
+<h5 id="returns"><a href="#returns">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - Ok if the account was created, otherwise an error</li>
+</ul>
+<h5 id="emits"><a href="#emits">Emits</a></h5>
+<ul>
+<li><code>AccountCreated</code> - If the account was created successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.create_creator_account" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#46">source</a><h4 class="code-header">fn <a href="#tymethod.create_creator_account" class="fn">create_creator_account</a>(&amp;mut self) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Create a creator account</p>
+<p>This function will deploy a creator account contract for the caller
+using the creator code hash</p>
+<h5 id="errors-1"><a href="#errors-1">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::AccountAlreadyExists</code> - If the account already exists</li>
+</ul>
+<h5 id="returns-1"><a href="#returns-1">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - Ok if the account was created, otherwise an error</li>
+</ul>
+<h5 id="emits-1"><a href="#emits-1">Emits</a></h5>
+<ul>
+<li><code>CreatorAccountCreated</code> - If the creator account was created successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_account" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#60">source</a><h4 class="code-header">fn <a href="#tymethod.get_account" class="fn">get_account</a>(&amp;self, account_id: AccountId) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountId&gt;</h4></section></summary><div class="docblock"><p>Get an account</p>
+<p>This function will get an account contract address</p>
+<h5 id="arguments"><a href="#arguments">Arguments</a></h5>
+<ul>
+<li><code>account_id</code> - An address of the user, for which to get the account contract address</li>
+</ul>
+<h5 id="returns-2"><a href="#returns-2">Returns</a></h5>
+<ul>
+<li><code>Option&lt;AccountId&gt;</code> - An account contract address if it exists, otherwise None</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_creator_account" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#74">source</a><h4 class="code-header">fn <a href="#tymethod.get_creator_account" class="fn">get_creator_account</a>(&amp;self, account_id: AccountId) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountId&gt;</h4></section></summary><div class="docblock"><p>Get a creator account</p>
+<p>This function will get a creator account contract address</p>
+<h5 id="arguments-1"><a href="#arguments-1">Arguments</a></h5>
+<ul>
+<li><code>account_id</code> - An address of the user, for which to get the creator contract address</li>
+</ul>
+<h5 id="returns-3"><a href="#returns-3">Returns</a></h5>
+<ul>
+<li><code>Option&lt;AccountId&gt;</code> - A creator account contract address if it exists, otherwise None</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_creator_code_hash" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#84">source</a><h4 class="code-header">fn <a href="#tymethod.get_creator_code_hash" class="fn">get_creator_code_hash</a>(&amp;self) -&gt; Hash</h4></section></summary><div class="docblock"><p>Get the creator code hash</p>
+<p>This function will get the creator code hash, which is used to deploy creator accounts</p>
+<h5 id="returns-4"><a href="#returns-4">Returns</a></h5>
+<ul>
+<li><code>Hash</code> - The creator code hash</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_user_code_hash" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#94">source</a><h4 class="code-header">fn <a href="#tymethod.get_user_code_hash" class="fn">get_user_code_hash</a>(&amp;self) -&gt; Hash</h4></section></summary><div class="docblock"><p>Get the user code hash</p>
+<p>This function will get the user code hash, which is used to deploy user accounts</p>
+<h5 id="returns-5"><a href="#returns-5">Returns</a></h5>
+<ul>
+<li><code>Hash</code> - The user code hash</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.set_creator_code_hash" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#112">source</a><h4 class="code-header">fn <a href="#tymethod.set_creator_code_hash" class="fn">set_creator_code_hash</a>(&amp;mut self, code_hash: Hash) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Set the creator code hash</p>
+<p>This function will set the creator code hash, which is used to deploy creator accounts</p>
+<h5 id="arguments-2"><a href="#arguments-2">Arguments</a></h5>
+<ul>
+<li><code>code_hash</code> - The creator code hash</li>
+</ul>
+<h5 id="returns-6"><a href="#returns-6">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - Ok if the code hash was set, otherwise an error</li>
+</ul>
+<h5 id="emits-2"><a href="#emits-2">Emits</a></h5>
+<ul>
+<li><code>CreatorCodeHashSet</code> - If the creator code hash was set successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.set_user_code_hash" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/account_manager.rs.html#130">source</a><h4 class="code-header">fn <a href="#tymethod.set_user_code_hash" class="fn">set_user_code_hash</a>(&amp;mut self, code_hash: Hash) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Set the user code hash</p>
+<p>This function will set the user code hash, which is used to deploy user accounts</p>
+<h5 id="arguments-3"><a href="#arguments-3">Arguments</a></h5>
+<ul>
+<li><code>code_hash</code> - The user code hash</li>
+</ul>
+<h5 id="returns-7"><a href="#returns-7">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - Ok if the code hash was set, otherwise an error</li>
+</ul>
+<h5 id="emits-3"><a href="#emits-3">Emits</a></h5>
+<ul>
+<li><code>UserCodeHashSet</code> - If the user code hash was set successfully</li>
+</ul>
+</div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor">§</a></h2><div id="implementors-list"></div><script src="../../../implementors/archisinal_lib/traits/account_manager/trait.AccountManager.js" async></script></section></div></main></body></html>

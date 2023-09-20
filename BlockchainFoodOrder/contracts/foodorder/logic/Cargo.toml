@@ -1,0 +1,35 @@
+[package]
+name = "logic"
+version = "1.0.0"
+authors = ["Alan Boyd"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.3.0", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = [
+    "derive",
+] }
+
+scale-info = { version = "2.6", default-features = false, features = [
+    "derive",
+], optional = true }
+
+openbrush = { git = "https://github.com/Brushfam/openbrush-contracts", tag = "4.0.0-beta.1", default-features = false, features = ["psp22", "ownable", "access_control", "upgradeable"] }
+
+crud-macro = { path = "../crud-macro", default-features = false }
+
+[lib]
+name = "logic"
+path = "lib.rs"
+crate-type = [
+    "rlib",
+]
+
+
+[features]
+default = ["std"]
+std = ["ink/std", "scale/std", "scale-info/std", "openbrush/std"]
+
+[profile.dev]
+codegen-units = 16

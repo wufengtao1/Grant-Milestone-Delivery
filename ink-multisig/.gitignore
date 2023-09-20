@@ -1,0 +1,4 @@
+node_modules
+contracts/**/target/
+.DS_Store
+contracts_node

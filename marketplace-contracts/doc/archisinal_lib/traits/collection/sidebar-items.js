@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["collection_external"],"trait":["Collection","UnionCollectionWrapperPSP34WrapperPSP34MetadataWrapperPSP34MintableWrapperPSP34BurnableWrapperOwnableWrapper"],"type":["CollectionRef"]};

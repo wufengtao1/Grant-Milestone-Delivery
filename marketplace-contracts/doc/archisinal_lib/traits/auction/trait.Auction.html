@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Auction trait"><title>Auction in archisinal_lib::traits::auction - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-f3501f0f5ae15dfb.css" id="mainThemeStyle"><div id="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="archisinal_lib" data-themes="" data-resource-suffix="" data-rustdoc-version="1.71.0 (8ede3aae2 2023-07-12)" data-search-js="search-4926e5fc22a5646a.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-8c76f75bfb6bd192.css" data-theme-light-css="light-0f8c037637f9eb3e.css" data-theme-dark-css="dark-1097f8e92a01e3cf.css" data-theme-ayu-css="ayu-614652228113ac93.css" ></div><script src="../../../static.files/storage-62ce34ea385b278a.js"></script><script defer src="sidebar-items.js"></script><script defer src="../../../static.files/main-f0540c1d82cde29b.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../../../static.files/light-0f8c037637f9eb3e.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../../../static.files/dark-1097f8e92a01e3cf.css"><link rel="stylesheet" href="../../../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc trait"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../../archisinal_lib/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../../../archisinal_lib/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2 class="location"><a href="#">Auction</a></h2><div class="sidebar-elems"><section><h3><a href="#required-methods">Required Methods</a></h3><ul class="block"><li><a href="#tymethod.bid_nft">bid_nft</a></li><li><a href="#tymethod.cancel_auction">cancel_auction</a></li><li><a href="#tymethod.claim_nft">claim_nft</a></li><li><a href="#tymethod.get_auction_by_index">get_auction_by_index</a></li><li><a href="#tymethod.get_auction_count">get_auction_count</a></li><li><a href="#tymethod.list_nft_for_auction">list_nft_for_auction</a></li><li><a href="#tymethod.start_auction">start_auction</a></li></ul><h3><a href="#implementors">Implementors</a></h3></section><h2><a href="index.html">In archisinal_lib::traits::auction</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Trait <a href="../../index.html">archisinal_lib</a>::<wbr><a href="../index.html">traits</a>::<wbr><a href="index.html">auction</a>::<wbr><a class="trait" href="#">Auction</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../../src/archisinal_lib/traits/auction.rs.html#16-209">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><pre class="rust item-decl"><code>pub trait Auction {
+    // Required methods
+    fn <a href="#tymethod.get_auction_count" class="fn">get_auction_count</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_auction_by_index" class="fn">get_auction_by_index</a>(&amp;self, index: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../impls/auction/data/struct.Auction.html" title="struct archisinal_lib::impls::auction::data::Auction">Auction</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.list_nft_for_auction" class="fn">list_nft_for_auction</a>(
+        &amp;mut self,
+        creator: AccountId,
+        collection: AccountId,
+        token_id: Id,
+        start_price: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>,
+        min_bid_step: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>,
+        currency: <a class="enum" href="../../impls/shared/currency/enum.Currency.html" title="enum archisinal_lib::impls::shared::currency::Currency">Currency</a>,
+        start_time: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u64.html">u64</a>,
+        end_time: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u64.html">u64</a>
+    ) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.start_auction" class="fn">start_auction</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.cancel_auction" class="fn">cancel_auction</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.bid_nft" class="fn">bid_nft</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>, price: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.claim_nft" class="fn">claim_nft</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+}</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Auction trait</p>
+<p>This trait defines the methods that are available on the Auction contract.</p>
+<h2 id="note"><a href="#note">Note</a></h2>
+<p>This trait is implemented by the Marketplace contract.</p>
+</div></details><h2 id="required-methods" class="small-section-header">Required Methods<a href="#required-methods" class="anchor">§</a></h2><div class="methods"><details class="toggle method-toggle" open><summary><section id="tymethod.get_auction_count" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/auction.rs.html#26">source</a><h4 class="code-header">fn <a href="#tymethod.get_auction_count" class="fn">get_auction_count</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a></h4></section></summary><div class="docblock"><p>Get the number of auctions</p>
+<h5 id="note-1"><a href="#note-1">Note</a></h5>
+<p>The auctions are indexed from 0 to <code>get_auction_count() - 1</code></p>
+<h5 id="returns"><a href="#returns">Returns</a></h5>
+<ul>
+<li><code>u128</code> - The number of auctions</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_auction_by_index" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/auction.rs.html#41">source</a><h4 class="code-header">fn <a href="#tymethod.get_auction_by_index" class="fn">get_auction_by_index</a>(&amp;self, index: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../impls/auction/data/struct.Auction.html" title="struct archisinal_lib::impls::auction::data::Auction">Auction</a>&gt;</h4></section></summary><div class="docblock"><p>Get the auction by index</p>
+<h5 id="note-2"><a href="#note-2">Note</a></h5>
+<p>The auctions are indexed from 0 to <code>get_auction_count() - 1</code></p>
+<h5 id="arguments"><a href="#arguments">Arguments</a></h5>
+<ul>
+<li><code>index</code> - The index of the auction</li>
+</ul>
+<h5 id="returns-1"><a href="#returns-1">Returns</a></h5>
+<ul>
+<li><code>Option&lt;data::Auction&gt;</code> - The auction, if it exists, otherwise None</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.list_nft_for_auction" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/auction.rs.html#78-88">source</a><h4 class="code-header">fn <a href="#tymethod.list_nft_for_auction" class="fn">list_nft_for_auction</a>(
+    &amp;mut self,
+    creator: AccountId,
+    collection: AccountId,
+    token_id: Id,
+    start_price: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>,
+    min_bid_step: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>,
+    currency: <a class="enum" href="../../impls/shared/currency/enum.Currency.html" title="enum archisinal_lib::impls::shared::currency::Currency">Currency</a>,
+    start_time: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u64.html">u64</a>,
+    end_time: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u64.html">u64</a>
+) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>&gt;</h4></section></summary><div class="docblock"><p>List an NFT for auction</p>
+<h5 id="note-3"><a href="#note-3">Note</a></h5>
+<p>This function will transfer the NFT from the caller to the Auction contract.
+Sets the auction state to <code>WaitingAuction</code>. Needs to be started by the owner of the NFT.</p>
+<h5 id="arguments-1"><a href="#arguments-1">Arguments</a></h5>
+<ul>
+<li><code>creator</code> - The creator of the listing</li>
+<li><code>collection</code> - The collection of the listing</li>
+<li><code>token_id</code> - The token ID of the listing</li>
+<li><code>start_price</code> - The starting price of the listing</li>
+<li><code>min_bid_step</code> - The minimum bid step of the listing</li>
+<li><code>currency</code> - The currency of the listing, either <code>Currency::Native</code> or <code>Currency::Custom(AccountId)</code></li>
+<li><code>start_time</code> - The start time of the listing</li>
+<li><code>end_time</code> - The end time of the listing</li>
+</ul>
+<h5 id="returns-2"><a href="#returns-2">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;u128&gt;</code> - The ID of the listing, if successful, otherwise an error</li>
+</ul>
+<h5 id="errors"><a href="#errors">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::CallerIsNotNFTOwner</code> - The caller is not the owner of the NFT</li>
+<li><code>ArchisinalError::PSP34Error(...)</code> - The PSP34 contract returned an error</li>
+<li><code>ArchisinalError::IntegerOverflow</code> - An integer overflow occurred</li>
+<li><code>ArchisinalError::AuctionPriceIsZero</code> - The auction price is zero</li>
+<li><code>ArchisinalError::AuctionEndTimeIsBeforeStartTime</code> - The end time of the auction is before the start time</li>
+<li><code>ArchisinalError::AuctionStartTimeIsBeforeNow</code> - The start time of the auction is before the current time</li>
+<li><code>ArchisinalError::AuctionMinBidStepIsZero</code> - The minimum bid step of the auction is zero</li>
+</ul>
+<h5 id="emits"><a href="#emits">Emits</a></h5>
+<ul>
+<li><code>AuctionCreated</code> - If the auction was listed successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.start_auction" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/auction.rs.html#116">source</a><h4 class="code-header">fn <a href="#tymethod.start_auction" class="fn">start_auction</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Start an auction</p>
+<h5 id="note-4"><a href="#note-4">Note</a></h5>
+<p>The caller must be the creator of the auction.
+The auction should be in the <code>WaitingAuction</code> state, otherwise it cannot be started.</p>
+<h5 id="arguments-2"><a href="#arguments-2">Arguments</a></h5>
+<ul>
+<li><code>auction_id</code> - The ID of the auction</li>
+</ul>
+<h5 id="returns-3"><a href="#returns-3">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - If successful, otherwise an error</li>
+</ul>
+<h5 id="errors-1"><a href="#errors-1">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::AuctionNotFound</code> - The auction was not found</li>
+<li><code>ArchisinalError::CallerIsNotAuctionOwner</code> - The caller is not the creator of the auction</li>
+<li><code>ArchisinalError::AuctionStartTimeIsBeforeNow</code> - The start time of the auction is before the current time</li>
+<li><code>ArchisinalError::AuctionNotWaiting</code> - The auction is not in the <code>WaitingAuction</code> state</li>
+</ul>
+<h5 id="emits-1"><a href="#emits-1">Emits</a></h5>
+<ul>
+<li><code>StartAuction</code> - If the auction was started successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.cancel_auction" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/auction.rs.html#144">source</a><h4 class="code-header">fn <a href="#tymethod.cancel_auction" class="fn">cancel_auction</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Cancel an auction</p>
+<h5 id="note-5"><a href="#note-5">Note</a></h5>
+<p>The caller must be the creator of the auction.
+Auction should be in the <code>WaitingAuction</code> state, otherwise it cannot be cancelled.
+Changes the state of the auction listing to <code>Cancelled</code>.</p>
+<h5 id="arguments-3"><a href="#arguments-3">Arguments</a></h5>
+<ul>
+<li><code>auction_id</code> - The ID of the auction</li>
+</ul>
+<h5 id="returns-4"><a href="#returns-4">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - If successful, otherwise an error</li>
+</ul>
+<h5 id="errors-2"><a href="#errors-2">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::AuctionNotFound</code> - The auction was not found</li>
+<li><code>ArchisinalError::CallerIsNotAuctionCreator</code> - The caller is not the creator of the auction</li>
+<li><code>ArchisinalError::PSP34Error(...)</code> - The PSP34 contract returned an error</li>
+<li><code>ArchisinalError::AuctionNotWaiting</code> - The auction is not in the waiting state, so it cannot be cancelled</li>
+</ul>
+<h5 id="emits-2"><a href="#emits-2">Emits</a></h5>
+<ul>
+<li><code>CancelAuction</code> - If the auction was cancelled successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.bid_nft" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/auction.rs.html#178">source</a><h4 class="code-header">fn <a href="#tymethod.bid_nft" class="fn">bid_nft</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>, price: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Bid on an auction</p>
+<h5 id="note-6"><a href="#note-6">Note</a></h5>
+<p>This method is payable, so the caller must send the bid amount with the call.
+The bid amount must be greater than or equal to the current price of the auction + min step.
+Should be in the <code>InAuction</code> state.</p>
+<h5 id="arguments-4"><a href="#arguments-4">Arguments</a></h5>
+<ul>
+<li><code>auction_id</code> - The ID of the auction</li>
+<li><code>price</code> - The price to bid</li>
+</ul>
+<h5 id="returns-5"><a href="#returns-5">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - If successful, otherwise an error</li>
+</ul>
+<h5 id="errors-3"><a href="#errors-3">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::AuctionNotFound</code> - The auction was not found</li>
+<li><code>ArchisinalError::CallerIsAuctionOwner</code> - The caller is the creator of the auction</li>
+<li><code>ArchisinalError::AuctionNotInAuction</code> - The auction is not in the auction state, so it cannot be bid on</li>
+<li><code>ArchisinalError::BidPriceTooLow</code> - The bid amount is too low</li>
+<li><code>ArchisinalError::AuctionNotStarted</code> - The bid amount is too high</li>
+<li><code>ArchisinalError::AuctionEnded</code> - The auction has ended</li>
+<li><code>ArchisinalError::IntegerOverflow</code> - An integer overflow occurred</li>
+<li><code>ArchisinalError::PSP22Error(...)</code> - The PSP22 contract returned an error</li>
+</ul>
+<h5 id="emits-3"><a href="#emits-3">Emits</a></h5>
+<ul>
+<li><code>BidPlaced</code> - If the bid was successful</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.claim_nft" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/auction.rs.html#208">source</a><h4 class="code-header">fn <a href="#tymethod.claim_nft" class="fn">claim_nft</a>(&amp;mut self, auction_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Claim an NFT from an auction</p>
+<h5 id="note-7"><a href="#note-7">Note</a></h5>
+<p>Should be in the <code>InAuction</code> state, but current time is greater than the end time.
+If successful, the NFT will be transferred to the highest bidder and listing will be switched to <code>Ended</code> state.</p>
+<h5 id="arguments-5"><a href="#arguments-5">Arguments</a></h5>
+<ul>
+<li><code>auction_id</code> - The ID of the auction</li>
+</ul>
+<h5 id="returns-6"><a href="#returns-6">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - If successful, otherwise an error</li>
+</ul>
+<h5 id="errors-4"><a href="#errors-4">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::AuctionNotFound</code> - The auction was not found</li>
+<li><code>ArchisinalError::AuctionNotInAuction</code> - The auction is not in the auction state, so it cannot be claimed</li>
+<li><code>ArchisinalError::AuctionNotEnded</code> - The auction has not ended (current time is less than the end time)</li>
+<li><code>ArchisinalError::PSP34Error(...)</code> - The PSP34 contract returned an error (e.g. NFT transfer failed)</li>
+</ul>
+<h5 id="emits-4"><a href="#emits-4">Emits</a></h5>
+<ul>
+<li><code>NFTClaimed</code> - If the NFT was claimed successfully</li>
+<li><code>EndAuction</code> - If the auction was ended successfully</li>
+<li><code>NoBids</code> - If there were no bids on the auction</li>
+</ul>
+</div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor">§</a></h2><div id="implementors-list"></div><script src="../../../implementors/archisinal_lib/traits/auction/trait.Auction.js" async></script></section></div></main></body></html>

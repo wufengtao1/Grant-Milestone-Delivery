@@ -1,0 +1,41 @@
+[package]
+name = "starlay_protocol_logics"
+version = "0.0.1"
+authors = ["Starlay Finance"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.3", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = [
+    "derive",
+] }
+scale-info = { version = "2.6", default-features = false, features = [
+    "derive",
+], optional = true }
+
+openbrush = { tag = "3.1.1", git = "https://github.com/Brushfam/openbrush-contracts", default-features = false, features = [
+    "psp22", "ownable"
+] }
+primitive-types = { version = "0.11.1", default-features = false, features = [
+    "codec",
+] }
+
+[lib]
+name = "starlay_protocol_logics"
+path = "lib.rs"
+crate-type = ["rlib"]
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "openbrush/std",
+    "primitive-types/std",
+    "primitive-types/scale-info",
+]
+
+[profile.release]
+overflow-checks = false

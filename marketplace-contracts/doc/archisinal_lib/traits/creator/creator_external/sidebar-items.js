@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"trait":["Creator","CreatorWrapper"],"type":["CreateCollectionInput1","CreateCollectionInput2","CreateCollectionInput3","CreateCollectionInput4","CreateCollectionInput5","CreateCollectionOutput","GetCollectionCountOutput","GetCollectionIdByIndexInput1","GetCollectionIdByIndexOutput"]};

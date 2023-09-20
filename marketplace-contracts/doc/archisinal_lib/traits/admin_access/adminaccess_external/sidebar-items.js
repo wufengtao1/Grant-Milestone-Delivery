@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"trait":["AdminAccess","AdminAccessWrapper"],"type":["AddAdminInput1","AddAdminOutput","IsAdminInput1","IsAdminOutput","RemoveAdminInput1","RemoveAdminOutput"]};

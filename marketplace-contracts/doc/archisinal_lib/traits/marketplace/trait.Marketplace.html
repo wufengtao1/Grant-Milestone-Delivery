@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `Marketplace` trait in crate `archisinal_lib`."><title>Marketplace in archisinal_lib::traits::marketplace - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-f3501f0f5ae15dfb.css" id="mainThemeStyle"><div id="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="archisinal_lib" data-themes="" data-resource-suffix="" data-rustdoc-version="1.71.0 (8ede3aae2 2023-07-12)" data-search-js="search-4926e5fc22a5646a.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-8c76f75bfb6bd192.css" data-theme-light-css="light-0f8c037637f9eb3e.css" data-theme-dark-css="dark-1097f8e92a01e3cf.css" data-theme-ayu-css="ayu-614652228113ac93.css" ></div><script src="../../../static.files/storage-62ce34ea385b278a.js"></script><script defer src="sidebar-items.js"></script><script defer src="../../../static.files/main-f0540c1d82cde29b.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../../../static.files/light-0f8c037637f9eb3e.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../../../static.files/dark-1097f8e92a01e3cf.css"><link rel="stylesheet" href="../../../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc trait"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../../archisinal_lib/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../../../archisinal_lib/index.html"><img class="rust-logo" src="../../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2 class="location"><a href="#">Marketplace</a></h2><div class="sidebar-elems"><section><h3><a href="#required-methods">Required Methods</a></h3><ul class="block"><li><a href="#tymethod.buy_batch">buy_batch</a></li><li><a href="#tymethod.buy_nft">buy_nft</a></li><li><a href="#tymethod.cancel_listing">cancel_listing</a></li><li><a href="#tymethod.get_listing_by_index">get_listing_by_index</a></li><li><a href="#tymethod.get_listing_count">get_listing_count</a></li><li><a href="#tymethod.list_nft_for_sale">list_nft_for_sale</a></li></ul><h3><a href="#implementors">Implementors</a></h3></section><h2><a href="index.html">In archisinal_lib::traits::marketplace</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Trait <a href="../../index.html">archisinal_lib</a>::<wbr><a href="../index.html">traits</a>::<wbr><a href="index.html">marketplace</a>::<wbr><a class="trait" href="#">Marketplace</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../../src/archisinal_lib/traits/marketplace.rs.html#10-160">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><pre class="rust item-decl"><code>pub trait Marketplace {
+    // Required methods
+    fn <a href="#tymethod.get_listing_count" class="fn">get_listing_count</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_listing_by_index" class="fn">get_listing_by_index</a>(&amp;self, index: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../impls/marketplace/data/struct.Listing.html" title="struct archisinal_lib::impls::marketplace::data::Listing">Listing</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.list_nft_for_sale" class="fn">list_nft_for_sale</a>(
+        &amp;mut self,
+        creator: AccountId,
+        collection: AccountId,
+        token_id: Id,
+        price: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>,
+        currency: <a class="enum" href="../../impls/shared/currency/enum.Currency.html" title="enum archisinal_lib::impls::shared::currency::Currency">Currency</a>
+    ) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.cancel_listing" class="fn">cancel_listing</a>(&amp;mut self, listing_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.buy_nft" class="fn">buy_nft</a>(&amp;mut self, listing_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.buy_batch" class="fn">buy_batch</a>(&amp;mut self, ids: <a class="struct" href="https://doc.rust-lang.org/1.71.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>&gt;) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;;
+}</code></pre><h2 id="required-methods" class="small-section-header">Required Methods<a href="#required-methods" class="anchor">§</a></h2><div class="methods"><details class="toggle method-toggle" open><summary><section id="tymethod.get_listing_count" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/marketplace.rs.html#20">source</a><h4 class="code-header">fn <a href="#tymethod.get_listing_count" class="fn">get_listing_count</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a></h4></section></summary><div class="docblock"><p>Get the number of listings</p>
+<h5 id="note"><a href="#note">Note</a></h5>
+<p>The listings are indexed from 0 to <code>get_listing_count() - 1</code></p>
+<h5 id="returns"><a href="#returns">Returns</a></h5>
+<ul>
+<li><code>u128</code> - The number of listings</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_listing_by_index" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/marketplace.rs.html#35">source</a><h4 class="code-header">fn <a href="#tymethod.get_listing_by_index" class="fn">get_listing_by_index</a>(&amp;self, index: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.71.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../impls/marketplace/data/struct.Listing.html" title="struct archisinal_lib::impls::marketplace::data::Listing">Listing</a>&gt;</h4></section></summary><div class="docblock"><p>Get the listing by index</p>
+<h5 id="note-1"><a href="#note-1">Note</a></h5>
+<p>The listings are indexed from 0 to <code>get_listing_count() - 1</code></p>
+<h5 id="arguments"><a href="#arguments">Arguments</a></h5>
+<ul>
+<li><code>index</code> - The index of the listing</li>
+</ul>
+<h5 id="returns-1"><a href="#returns-1">Returns</a></h5>
+<ul>
+<li><code>Option&lt;Listing&gt;</code> - The listing, if it exists, otherwise None</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.list_nft_for_sale" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/marketplace.rs.html#66-73">source</a><h4 class="code-header">fn <a href="#tymethod.list_nft_for_sale" class="fn">list_nft_for_sale</a>(
+    &amp;mut self,
+    creator: AccountId,
+    collection: AccountId,
+    token_id: Id,
+    price: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>,
+    currency: <a class="enum" href="../../impls/shared/currency/enum.Currency.html" title="enum archisinal_lib::impls::shared::currency::Currency">Currency</a>
+) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>&gt;</h4></section></summary><div class="docblock"><p>List an NFT for sale</p>
+<h5 id="note-2"><a href="#note-2">Note</a></h5>
+<p>This function will transfer the NFT from the caller to the Marketplace contract.
+Sets the listing state to <code>OnSale</code></p>
+<h5 id="arguments-1"><a href="#arguments-1">Arguments</a></h5>
+<ul>
+<li><code>creator</code> - The creator of the listing</li>
+<li><code>collection</code> - The collection of the listing</li>
+<li><code>token_id</code> - The token ID of the listing</li>
+<li><code>price</code> - The price of the listing</li>
+<li><code>currency</code> - The currency of the listing, either <code>Currency::Native</code> or <code>Currency::Custom(AccountId)</code></li>
+</ul>
+<h5 id="returns-2"><a href="#returns-2">Returns</a></h5>
+<ul>
+<li><code>ProjectRestul&lt;u128&gt;</code> - The ID of the listing that was created, if successful otherwise an error</li>
+</ul>
+<h5 id="errors"><a href="#errors">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::CreatorIsNotCaller</code> - If the creator is not the caller</li>
+<li><code>ArchisinalError::CallerIsNotNFTOwner</code> - If the caller is not the owner of the NFT</li>
+<li><code>ArchisinalError::PSP34Error(...)</code> - If the PSP34 contract returns an error</li>
+<li><code>ArchisinalError::IntegerOverflow</code> - If an integer overflow occurs</li>
+</ul>
+<h5 id="emits"><a href="#emits">Emits</a></h5>
+<ul>
+<li><code>ListNFT</code> - If the listing was created successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.cancel_listing" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/marketplace.rs.html#100">source</a><h4 class="code-header">fn <a href="#tymethod.cancel_listing" class="fn">cancel_listing</a>(&amp;mut self, listing_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>List an NFT for auction</p>
+<h5 id="note-3"><a href="#note-3">Note</a></h5>
+<p>This function will transfer the NFT from the Marketplace contract to creator back.
+The listing should be in <code>OnSale</code> state.</p>
+<h5 id="arguments-2"><a href="#arguments-2">Arguments</a></h5>
+<ul>
+<li><code>listing_id</code> - The ID of the listing</li>
+</ul>
+<h5 id="returns-3"><a href="#returns-3">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - If successful, otherwise an error</li>
+</ul>
+<h5 id="errors-1"><a href="#errors-1">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::ListingNotFound</code> - If the listing does not exist</li>
+<li><code>ArchisinalError::ListingIsNotOnSale</code> - If the listing is not in <code>OnSale</code> state</li>
+<li><code>ArchisinalError::PSP34Error(...)</code> - If the PSP34 contract returns an error</li>
+<li><code>ArchisinalError::CallerIsNotListingOwner</code> - If the caller is not the owner of the listing</li>
+</ul>
+<h5 id="emits-1"><a href="#emits-1">Emits</a></h5>
+<ul>
+<li><code>CancelListing</code> - If the listing was cancelled successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.buy_nft" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/marketplace.rs.html#129">source</a><h4 class="code-header">fn <a href="#tymethod.buy_nft" class="fn">buy_nft</a>(&amp;mut self, listing_id: <a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Buy an NFT</p>
+<h5 id="note-4"><a href="#note-4">Note</a></h5>
+<p>This function will transfer the NFT from the Marketplace contract to the buyer.</p>
+<h5 id="arguments-3"><a href="#arguments-3">Arguments</a></h5>
+<ul>
+<li><code>listing_id</code> - The ID of the listing</li>
+</ul>
+<h5 id="returns-4"><a href="#returns-4">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - If successful, otherwise an error</li>
+</ul>
+<h5 id="errors-2"><a href="#errors-2">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::ListingNotFound</code> - If the listing does not exist</li>
+<li><code>ArchisinalError::ListingIsNotOnSale</code> - If the listing is not in <code>OnSale</code> state</li>
+<li><code>ArchisinalError::PSP34Error(...)</code> - If the PSP34 contract returns an error</li>
+<li><code>ArchisinalError::CallerIsNotListingOwner</code> - If the caller is not the owner of the listing</li>
+<li><code>ArchisinalError::IntegerOverflow</code> - If an integer overflow occurs</li>
+<li><code>ArchisinalError::TransferNativeError</code> - If the transfer of native currency fails</li>
+<li><code>ArchisinalError::PSP22(...)</code> - If the transfer of custom currency fails</li>
+</ul>
+<h5 id="emits-2"><a href="#emits-2">Emits</a></h5>
+<ul>
+<li><code>BuyNFT</code> - If the NFT was bought successfully</li>
+</ul>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.buy_batch" class="method"><a class="srclink rightside" href="../../../src/archisinal_lib/traits/marketplace.rs.html#159">source</a><h4 class="code-header">fn <a href="#tymethod.buy_batch" class="fn">buy_batch</a>(&amp;mut self, ids: <a class="struct" href="https://doc.rust-lang.org/1.71.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.u128.html">u128</a>&gt;) -&gt; <a class="type" href="../type.ProjectResult.html" title="type archisinal_lib::traits::ProjectResult">ProjectResult</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.71.0/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Buy a batch of NFTs</p>
+<h5 id="note-5"><a href="#note-5">Note</a></h5>
+<p>This function will transfer the NFTs from the Marketplace contract to the buyer.</p>
+<h5 id="arguments-4"><a href="#arguments-4">Arguments</a></h5>
+<ul>
+<li><code>ids</code> - The IDs of the listings</li>
+</ul>
+<h5 id="returns-5"><a href="#returns-5">Returns</a></h5>
+<ul>
+<li><code>ProjectResult&lt;()&gt;</code> - If successful, otherwise an error</li>
+</ul>
+<h5 id="errors-3"><a href="#errors-3">Errors</a></h5>
+<ul>
+<li><code>ArchisinalError::ListingNotFound</code> - If the listing does not exist</li>
+<li><code>ArchisinalError::ListingIsNotOnSale</code> - If the listing is not in <code>OnSale</code> state</li>
+<li><code>ArchisinalError::PSP34Error(...)</code> - If the PSP34 contract returns an error</li>
+<li><code>ArchisinalError::CallerIsNotListingOwner</code> - If the caller is not the owner of the listing</li>
+<li><code>ArchisinalError::IntegerOverflow</code> - If an integer overflow occurs</li>
+<li><code>ArchisinalError::TransferNativeError</code> - If the transfer of native currency fails</li>
+<li><code>ArchisinalError::PSP22(...)</code> - If the transfer of custom currency fails</li>
+</ul>
+<h5 id="emits-3"><a href="#emits-3">Emits</a></h5>
+<ul>
+<li><code>BuyBatch</code> - If the NFTs were bought successfully</li>
+</ul>
+</div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor">§</a></h2><div id="implementors-list"></div><script src="../../../implementors/archisinal_lib/traits/marketplace/trait.Marketplace.js" async></script></section></div></main></body></html>

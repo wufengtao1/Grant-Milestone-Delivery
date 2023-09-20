@@ -1,0 +1,9 @@
+typechain-generated/
+contracts/
+impls/
+traits/
+archisinal_lib/
+.eslintrc.js
+test/shared/chai.ts
+target/
+doc/

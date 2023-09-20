@@ -1,0 +1,38 @@
+[package]
+name = "mock_auction"
+version = "0.1.0"
+authors = ["sventime <semirazov94@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.2.0", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.6", default-features = false, features = ["derive"], optional = true }
+
+openbrush = { git = "https://github.com/Brushfam/openbrush-contracts", tag = "4.0.0-beta", default-features = false, features = ["ownable", "access_control", "upgradeable"] }
+archisinal_lib = { path = "../../..", default-features = false }
+
+[dev-dependencies]
+ink_e2e = "4.2.0"
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "openbrush/std",
+    "archisinal_lib/std",
+]
+ink-as-dependency = []
+e2e-tests = []
+
+[profile.dev]
+overflow-checks = false
+
+[profile.release]
+overflow-checks = false

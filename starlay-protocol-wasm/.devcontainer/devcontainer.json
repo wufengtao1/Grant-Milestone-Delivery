@@ -1,0 +1,25 @@
+{
+  "name": "Rust Dev Container",
+  "context": "..",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "lldb.executable": "/usr/bin/lldb",
+    "files.watcherExclude": {
+      "**/target/**": true
+    }
+  },
+
+  "extensions": [
+    "bungcip.better-toml",
+    "vadimcn.vscode-lldb",
+    "mutantdino.resourcemonitor",
+    "ms-azuretools.vscode-docker",
+    "rust-lang.rust-analyzer"
+  ],
+  "mounts": [
+    "source=build,target=${containerWorkspaceFolder}/target,type=volume",
+    "source=node_mod,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=contracts_node_build,target=${containerWorkspaceFolder}/substrate-contracts-node/target,type=volume"
+  ]
+}
